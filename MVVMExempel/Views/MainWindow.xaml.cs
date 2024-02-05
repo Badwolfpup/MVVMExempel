@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using MVVMExempel.ViewModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MVVMExempel.Commands;
 
 namespace MVVMExempel.Views
 {
@@ -19,6 +21,18 @@ namespace MVVMExempel.Views
         public MainWindow()
         {
             InitializeComponent();
+            MainViewModel mainViewModel = new MainViewModel();
+            DataContext = mainViewModel;
+        }
+
+        private void changeProperty_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FilterTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
