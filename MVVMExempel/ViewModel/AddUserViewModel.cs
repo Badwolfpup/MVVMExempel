@@ -15,7 +15,7 @@ namespace MVVMExempel.ViewModel
 
         public string? Email { get; set;}
 
-        public ICommand AddUserCommand;
+        public ICommand AddUserCommand {  get; set; }
         public AddUserViewModel()
         {
             AddUserCommand = new RelayCommand(AddUser, canAddUser);
